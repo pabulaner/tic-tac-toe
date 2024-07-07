@@ -2,51 +2,24 @@ package com.company;
 
 import java.util.Scanner;
 
-public class ViviGameIO implements GameIO, Game{
-    private char playerX;
-    private char playerO;
+public class ViviGameIO implements GameIO {
+    private char[] player;
+
 
     public ViviGameIO() {
-        playerX = 'x';
-        playerO = 'o';
+        player = new char[] {'x','o'};
     }
-
-    @Override
     public void printText(String text) {
-
+        System.out.println(text);
     }
 
     public void printBoard(Board board) {
-        board.clear();
+        
     }
 
-    @Override
     public int getInput() {
-        Scanner userX = new Scanner(System.in);
-        System.out.println("userX" + userX);
-        int getX = userX.nextInt();
-        System.out.println("userX is setting " + getX);
-
-        Scanner userO = new Scanner(System.in);
-        System.out.println("userO" + userO);
-        int getO = userO.nextInt();
-        System.out.println("userX is setting " + getO);
-        return getX;
+        return 4;
     }
 
-    @Override
-    public void start() {
-        playerX = 'x';
-        playerO = 'o';
-    }
 
-    @Override
-    public boolean hasWon(char player) {
-        return false;
-    }
-
-    @Override
-    public boolean isTie() {
-        return false;
-    }
 }
