@@ -2,8 +2,10 @@ package com.company;
 
 public class ViviBoard implements Board {
 
+    public char value;
     private char[] field;
     static int totalFieldNumber;
+    private static int round;
 
     public ViviBoard() {
         totalFieldNumber = 9;
@@ -25,7 +27,8 @@ public class ViviBoard implements Board {
         if (index > 0 && index <= totalFieldNumber) {
             if(value == 'x' || value == 'o' || value == '-') {
                 field[index - 1] = value;
-                System.out.println("Player " + field[index - 1] + " has chosen " + index);
+                round++;
+                System.out.println("Player " + field[index - 1] + " has chosen " + index + " in round" + round);
             } else {
                 System.out.println("invalid value");
             }
