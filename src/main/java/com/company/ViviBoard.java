@@ -17,7 +17,7 @@ public class ViviBoard implements Board {
 
     public char getValueAt(int index) {
         if (index <= totalFieldNumber && index > 0) {
-            System.out.println(field[index - 1] + " " + index);
+            //System.out.println(field[index - 1] + " " + index);
             return field[index - 1];
         }
         return '-';
