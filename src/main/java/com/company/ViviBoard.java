@@ -2,7 +2,6 @@ package com.company;
 
 public class ViviBoard implements Board {
 
-    public char value;
     private char[] field;
     static int totalFieldNumber;
     private static int round;
